@@ -88,10 +88,13 @@ a:active {
   color: #d2eafc;
 }
 
-.center{ /*Override any other text align code*/
+.center{ /* Override any other text align code*/
   text-align: center !important;
 }
 
+.noline{ /* Override underlining decoration */
+  text-decoration-line: none !important;
+}
 
 /* Background */
 body{
