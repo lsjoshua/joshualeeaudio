@@ -32,8 +32,10 @@ html {
 /* Text */
 h1 {
   font-family: "Space Mono", monospace;
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 40px;
+  color: #d0e7e5;
+  transform: scaleY(1.25);
+  transform: scaleX(1.05);
   }
 h2 {
   font-family: "Space Mono", monospace;
@@ -88,15 +90,17 @@ a:active {
   color: #d2eafc;
 }
 
-.center{ /*Override any other text align code*/
+.center{ /* Override any other text align code*/
   text-align: center !important;
 }
 
+.noline{ /* Override underlining decoration */
+  text-decoration-line: none !important;
+}
 
 /* Background */
 body{
-  background-color: #fcfcfc;
-  background-image: url(Images/bg-nikko.png);
+  background-color: #1a1a1a;
   background-position: top;
   background-attachment: fixed;
   background-size: cover;
@@ -113,7 +117,7 @@ body{
 .left{
   position: fixed;
   display: inline-block;
-  background-color: rgb(20,20,20,0.95);
+  background-color: #1a1a1a;
   margin-left: 5px;
   margin-right: 5px;
   width: 300px;
@@ -125,10 +129,12 @@ body{
   display: inline-block;
   width: 690px;
   margin-left: 305px;
-  background-color: rgb(20,20,20,0.95);
+  background-color: #1a1a1a;
   top: 0;
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid #d0e7e5;
+  padding-bottom: 10px;
 }
+
 @media screen and (min-width: 1024px) {
 .content-mobile{
   display: none;
@@ -159,17 +165,9 @@ body{
   margin-right: 25px;
   text-align: left;
 }
-.archive-content{
-  width: 95%;
-  display: inline-block;
-  margin-right: 25px;
-  margin-bottom: 1%;
-  margin-left: 1%;
-  text-align: left;
-}
 .archive-date{
   border-bottom: 1px solid white;
-  width: 6%;
+  width: 11%;
   margin-left: none;
   margin-right: none;
 }
@@ -182,18 +180,55 @@ body{
   margin-left: 25px;
   text-align: left;
 }
+/* Contact form styling */
+.form-control{
+  background-color: #1a1a1a;
+  width: 80%;
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid white;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: #ffffff;
+}
+.button{
+  background-color: #1a1a1a;
+  border: none;
+  color: black;
+  outline: 1px solid white;
+  box-shadow: 4px 4px black;
+  padding: 10px 25px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: #ffffff;
+}
+.button:hover {
+  background-color: #000000;
+}
+.button:active {
+  box-shadow: 1px 1px black;
+  transform: translate(2px,2px);
+}
+.formwrapper{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
 
 footer{
-  position: fixed;
   display: inline;
   padding-top: 0px;
   padding-bottom: 10px;
   width: 100%;
+  margin-left: 25px;
   bottom: 0;
   line-height: 1;
-}
-footer-mobile{
-  display: none;
 }
 
 /* Media classes */
@@ -289,8 +324,6 @@ footer{
 /* Mobile Layout */
 @media screen and (max-width: 767px) {
 body{
-  background-color: #000000;
-  background-attachment: fill;
   margin: 0;
 }
 
@@ -306,24 +339,23 @@ iframe{
   width: 95%;
 }
 .left{
-  background-color: rgb(20,20,20,0.95);
   position: static;
   display: inline-block;
   text-align: center;
-  width: 95%;
-  margin-left: 2.5%;
-  margin-right: 0;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-top: 20px;
   margin-top: -10px;
   padding-bottom: 20px;
   margin-bottom: -10px;
 }
 .right{
-  background-color: rgb(20,20,20,0.95);
   position: static;
   display: inline-block;
-  width: 95%;
-  margin-left: 2.5%;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: center;
   margin-top: 10px;
   padding-top: 0px;
@@ -357,12 +389,6 @@ iframe{
   margin-left: 0.5%;
   margin-right: 0.5%;
 }
-.archive-content{
-  display: inline-block;
-  text-align: center;
-  margin-top: -20px;
-  margin-bottom: 15px;
-}
 .content-desktop{
   display: none;
 }
@@ -378,6 +404,11 @@ iframe{
   margin-left: auto;
   margin-right: auto;
 }
+.formwrapper{
+  margin-left: 2%;
+  margin-right: 2%;
+  max-width: 700px;
+}
 
 /* Media classes */
 .project-img{
@@ -391,10 +422,7 @@ iframe{
   padding: 2px;
 }
 footer{
-  display: none
-}
-footer-mobile{
-  display: inline;
-  width: 95%;
+  width: 100%;
+  margin-left: 0px;
 }
 }
